@@ -22,7 +22,7 @@ class HomeViewController: UIViewController {
     
     fileprivate lazy var pageContentView : PageContentView = {[weak self] in
         //1. 确认frame
-        let contentHeight = kSreenH - (kStatuesBarH + kNavigetionBarH + titlesHeight)
+        let contentHeight = kSreenH - (kStatuesBarH + kNavigetionBarH + titlesHeight + kTabbarH)
         let contentFrame = CGRect(x: 0, y: kStatuesBarH + kNavigetionBarH + titlesHeight, width: kSreenW, height: contentHeight)
         //2. 确认子控制器
         var childVcs = [UIViewController]()

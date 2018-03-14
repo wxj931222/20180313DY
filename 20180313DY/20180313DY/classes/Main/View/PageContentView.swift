@@ -19,6 +19,7 @@ class PageContentView: UIView {
     fileprivate var childVcs: [UIViewController]
     fileprivate weak var parentViewControllView: UIViewController?
     fileprivate var starOffsetX : CGFloat  = 0
+    fileprivate var isForbitScrollDelegate : Bool = false
     weak var  delegate : PageContentViewDelegate?
     //懒加载
     fileprivate lazy var collectionView : UICollectionView = {[weak self] in
@@ -87,10 +88,13 @@ extension PageContentView: UICollectionViewDataSource {
 
 extension PageContentView: UICollectionViewDelegate {
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-         starOffsetX = scrollView.contentOffset.x
+        isForbitScrollDelegate = false
+        starOffsetX = scrollView.contentOffset.x
     }
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        //判断是否是点击事情 true(点击)  false(滚动)
+        if isForbitScrollDelegate { return }
         print("----")
         //定义数据
         var progress : CGFloat = 0  //滑动的比例
@@ -136,6 +140,8 @@ extension PageContentView: UICollectionViewDelegate {
 //对外暴露的方法
 extension PageContentView {
     func setCurrentIndex(currenIndex: Int){
+        //记录需要进制执行此方法
+        isForbitScrollDelegate = true
         //根据点击的label计算x的偏移值
         let offsetX = CGFloat(currenIndex) * collectionView.frame.width
         collectionView.setContentOffset(CGPoint(x: offsetX, y: 0), animated: false)
