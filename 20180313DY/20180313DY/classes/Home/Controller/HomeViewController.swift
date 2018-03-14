@@ -11,15 +11,16 @@ import UIKit
 private var titlesHeight : CGFloat = 40
 
 class HomeViewController: UIViewController {
-    fileprivate lazy var pageTitleView : PageTitleView = {
+    fileprivate lazy var pageTitleView : PageTitleView = {[weak self] in
         let titleFrame = CGRect(x: 0, y: kStatuesBarH + kNavigetionBarH, width:kSreenW , height:titlesHeight)
         let titles = ["推荐","游戏","娱乐","趣玩"]
         let titlesView = PageTitleView(frame: titleFrame, titles: titles)
+        titlesView.delegate = self
         titlesView.backgroundColor = UIColor.white
         return titlesView
     }()
     
-    fileprivate lazy var pageContentView : PageContentView = {
+    fileprivate lazy var pageContentView : PageContentView = {[weak self] in
         //1. 确认frame
         let contentHeight = kSreenH - (kStatuesBarH + kNavigetionBarH + titlesHeight)
         let contentFrame = CGRect(x: 0, y: kStatuesBarH + kNavigetionBarH + titlesHeight, width: kSreenW, height: contentHeight)
@@ -31,7 +32,8 @@ class HomeViewController: UIViewController {
             childVcs.append(vc)
         }
         //3. 确认父控制器
-        let contentView = PageContentView(frame: contentFrame, childVcs: childVcs, parentViewControllView: self)
+        let contentView = PageContentView(frame: contentFrame, childVcs: childVcs, parentViewControllView: self!)
+        contentView.delegate = self
         return contentView
     }()
     
@@ -71,3 +73,17 @@ extension HomeViewController {
         
     }
 }
+
+//遵=遵守PageTitleViewDelegate
+extension HomeViewController :PageTitleViewDelegate {
+    func pageTitleView(_ titleView: PageTitleView, selectedindex: Int) {
+        pageContentView.setCurrentIndex(currenIndex: selectedindex)
+    }
+}
+//MARK: 遵守PageContentViewDelegate
+extension HomeViewController: PageContentViewDelegate {
+    func pageContentView(contentView: PageContentView, progress: CGFloat, sourceIndex: Int, targetIndex: Int) {
+        pageTitleView.setTitleWithProgress(progress: progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
+    }
+}
+

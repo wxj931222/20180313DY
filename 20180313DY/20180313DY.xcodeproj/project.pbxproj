@@ -408,17 +408,20 @@
 					631A39992057729600C4B3C1 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 6TWECAM3DM;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					631A39AD2057729700C4B3C1 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 6TWECAM3DM;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 631A39992057729600C4B3C1;
 					};
 					631A39B82057729700C4B3C1 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 6TWECAM3DM;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 631A39992057729600C4B3C1;
 					};
