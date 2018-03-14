@@ -8,7 +8,33 @@
 
 import UIKit
 
+private var titlesHeight : CGFloat = 40
+
 class HomeViewController: UIViewController {
+    fileprivate lazy var pageTitleView : PageTitleView = {
+        let titleFrame = CGRect(x: 0, y: kStatuesBarH + kNavigetionBarH, width:kSreenW , height:titlesHeight)
+        let titles = ["推荐","游戏","娱乐","趣玩"]
+        let titlesView = PageTitleView(frame: titleFrame, titles: titles)
+        titlesView.backgroundColor = UIColor.white
+        return titlesView
+    }()
+    
+    fileprivate lazy var pageContentView : PageContentView = {
+        //1. 确认frame
+        let contentHeight = kSreenH - (kStatuesBarH + kNavigetionBarH + titlesHeight)
+        let contentFrame = CGRect(x: 0, y: kStatuesBarH + kNavigetionBarH + titlesHeight, width: kSreenW, height: contentHeight)
+        //2. 确认子控制器
+        var childVcs = [UIViewController]()
+        for _ in 0..<4 {
+            let vc = UIViewController()
+            vc.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
+            childVcs.append(vc)
+        }
+        //3. 确认父控制器
+        let contentView = PageContentView(frame: contentFrame, childVcs: childVcs, parentViewControllView: self)
+        return contentView
+    }()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,8 +47,15 @@ class HomeViewController: UIViewController {
 //设置UI界面
 extension HomeViewController {
     fileprivate func setupUI(){
+        //0. 不需要调整scrollView的内边距
+        automaticallyAdjustsScrollViewInsets = false
         //1, 设置导航栏控制器
         setupNavigetionbar()
+        //2. 添加Title
+        view.addSubview(pageTitleView)
+        //3. 设置content
+        view.addSubview(pageContentView)
+        pageContentView.backgroundColor = UIColor.red
     }
     fileprivate func setupNavigetionbar() {
         //1, 设置左侧的Item
