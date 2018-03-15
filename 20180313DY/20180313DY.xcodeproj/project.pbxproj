@@ -29,6 +29,8 @@
 		631A3A07205A3B4200C4B3C1 /* CollectionHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 631A3A05205A3B4200C4B3C1 /* CollectionHeadView.xib */; };
 		631A3A0A205A42E600C4B3C1 /* CollectionViewNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631A3A08205A42E600C4B3C1 /* CollectionViewNormalCell.swift */; };
 		631A3A0B205A42E600C4B3C1 /* CollectionViewNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 631A3A09205A42E600C4B3C1 /* CollectionViewNormalCell.xib */; };
+		631A3A0E205A4BE300C4B3C1 /* CollectionPrettyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631A3A0C205A4BE300C4B3C1 /* CollectionPrettyCell.swift */; };
+		631A3A0F205A4BE300C4B3C1 /* CollectionPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 631A3A0D205A4BE300C4B3C1 /* CollectionPrettyCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,8 @@
 		631A3A05205A3B4200C4B3C1 /* CollectionHeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionHeadView.xib; sourceTree = "<group>"; };
 		631A3A08205A42E600C4B3C1 /* CollectionViewNormalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewNormalCell.swift; sourceTree = "<group>"; };
 		631A3A09205A42E600C4B3C1 /* CollectionViewNormalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewNormalCell.xib; sourceTree = "<group>"; };
+		631A3A0C205A4BE300C4B3C1 /* CollectionPrettyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionPrettyCell.swift; sourceTree = "<group>"; };
+		631A3A0D205A4BE300C4B3C1 /* CollectionPrettyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionPrettyCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -340,6 +344,8 @@
 				631A39FC2058B29400C4B3C1 /* PageContentView.swift */,
 				631A3A08205A42E600C4B3C1 /* CollectionViewNormalCell.swift */,
 				631A3A09205A42E600C4B3C1 /* CollectionViewNormalCell.xib */,
+				631A3A0C205A4BE300C4B3C1 /* CollectionPrettyCell.swift */,
+				631A3A0D205A4BE300C4B3C1 /* CollectionPrettyCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -474,6 +480,7 @@
 				631A39D62057AC2300C4B3C1 /* Live.storyboard in Resources */,
 				631A3A0B205A42E600C4B3C1 /* CollectionViewNormalCell.xib in Resources */,
 				631A39D42057ABEA00C4B3C1 /* Home.storyboard in Resources */,
+				631A3A0F205A4BE300C4B3C1 /* CollectionPrettyCell.xib in Resources */,
 				631A39DB2057AC4400C4B3C1 /* Profile.storyboard in Resources */,
 				631A39D92057AC3400C4B3C1 /* Follow.storyboard in Resources */,
 			);
@@ -509,6 +516,7 @@
 				631A3A012058B67E00C4B3C1 /* UIColor_Extention.swift in Sources */,
 				631A39EF2057B28400C4B3C1 /* MainViewController.swift in Sources */,
 				631A39FB2057CA4600C4B3C1 /* Common.swift in Sources */,
+				631A3A0E205A4BE300C4B3C1 /* CollectionPrettyCell.swift in Sources */,
 				631A3A06205A3B4200C4B3C1 /* CollectionHeadView.swift in Sources */,
 				631A39F32057B2DA00C4B3C1 /* HomeViewController.swift in Sources */,
 			);

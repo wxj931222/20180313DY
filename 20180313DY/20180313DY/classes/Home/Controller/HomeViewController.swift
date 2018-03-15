@@ -37,7 +37,6 @@ class HomeViewController: UIViewController {
         contentView.delegate = self
         return contentView
     }()
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
