@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R2x-VE-TEz">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="10"/>
+                    <color key="backgroundColor" red="0.91764705882352937" green="0.91764705882352937" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="10" id="GtF-3D-Ff1"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_header_normal" translatesAutoresizingMaskIntoConstraints="NO" id="HBQ-dK-Cry">
+                    <rect key="frame" x="10" y="21" width="18" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="1iq-Np-ZE3"/>
+                        <constraint firstAttribute="width" constant="18" id="CTO-3w-DoA"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="直播" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krW-vN-n0S">
+                    <rect key="frame" x="33" y="22" width="27" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LZm-d6-HXR">
+                    <rect key="frame" x="250" y="15" width="60" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="vIk-C9-9Aw"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="更多 &gt;">
+                        <color key="titleColor" red="0.48921875000000004" green="0.48921875000000004" blue="0.48921875000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="krW-vN-n0S" firstAttribute="centerY" secondItem="HBQ-dK-Cry" secondAttribute="centerY" id="3Qp-OD-qrj"/>
+                <constraint firstItem="R2x-VE-TEz" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="DXJ-uO-wag"/>
+                <constraint firstAttribute="trailing" secondItem="R2x-VE-TEz" secondAttribute="trailing" id="Hge-Lg-U6T"/>
+                <constraint firstAttribute="bottom" secondItem="LZm-d6-HXR" secondAttribute="bottom" constant="5" id="YYy-Fa-MF0"/>
+                <constraint firstItem="HBQ-dK-Cry" firstAttribute="top" secondItem="R2x-VE-TEz" secondAttribute="bottom" constant="11" id="bcW-Uu-9XR"/>
+                <constraint firstItem="krW-vN-n0S" firstAttribute="leading" secondItem="HBQ-dK-Cry" secondAttribute="trailing" constant="5" id="dmX-ir-9vO"/>
+                <constraint firstItem="HBQ-dK-Cry" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="10" id="eRP-aG-fD8"/>
+                <constraint firstItem="R2x-VE-TEz" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="hpi-IS-4Oa"/>
+                <constraint firstItem="LZm-d6-HXR" firstAttribute="top" secondItem="R2x-VE-TEz" secondAttribute="bottom" constant="5" id="yM5-Y3-8LZ"/>
+                <constraint firstAttribute="trailing" secondItem="LZm-d6-HXR" secondAttribute="trailing" constant="10" id="ybd-V1-awN"/>
+            </constraints>
+            <point key="canvasLocation" x="-99" y="-72"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <image name="home_header_normal" width="18" height="18"/>
+    </resources>
+</document>
