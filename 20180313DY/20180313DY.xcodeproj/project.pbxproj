@@ -24,6 +24,7 @@
 		631A39FB2057CA4600C4B3C1 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631A39FA2057CA4600C4B3C1 /* Common.swift */; };
 		631A39FD2058B29400C4B3C1 /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631A39FC2058B29400C4B3C1 /* PageContentView.swift */; };
 		631A3A012058B67E00C4B3C1 /* UIColor_Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631A3A002058B67E00C4B3C1 /* UIColor_Extention.swift */; };
+		631A3A03205A031200C4B3C1 /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631A3A02205A031200C4B3C1 /* RecommendViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		631A39FA2057CA4600C4B3C1 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		631A39FC2058B29400C4B3C1 /* PageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
 		631A3A002058B67E00C4B3C1 /* UIColor_Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor_Extention.swift; sourceTree = "<group>"; };
+		631A3A02205A031200C4B3C1 /* RecommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +245,7 @@
 			children = (
 				631A39D22057ABEA00C4B3C1 /* Home.storyboard */,
 				631A39F22057B2DA00C4B3C1 /* HomeViewController.swift */,
+				631A3A02205A031200C4B3C1 /* RecommendViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -485,6 +488,7 @@
 			files = (
 				631A39F62057BA3900C4B3C1 /* UIBarButtonItem_Extension.swift in Sources */,
 				631A399E2057729700C4B3C1 /* AppDelegate.swift in Sources */,
+				631A3A03205A031200C4B3C1 /* RecommendViewController.swift in Sources */,
 				631A39F82057C7FA00C4B3C1 /* PageTitleView.swift in Sources */,
 				631A39FD2058B29400C4B3C1 /* PageContentView.swift in Sources */,
 				631A3A012058B67E00C4B3C1 /* UIColor_Extention.swift in Sources */,

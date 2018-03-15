@@ -147,7 +147,7 @@ extension PageTitleView {
         let moveX = moveTotalX * progress
         scrollLine.frame.origin.x = sourceLabel.frame.origin.x + moveX
         
-        currentIndex = targetIndex
+        currentIndex = targetIndex 
     }
 }
 
